@@ -199,6 +199,9 @@ public class Problem4Test {
                 /*
                 TODO: add your ways of making a million dollar using compounding interest
                  */
+                add(new TestCase(20000, 5000, 15, 12,
+                        245000, 1031984.27f));
+
             }
         };
 
