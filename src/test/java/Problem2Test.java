@@ -1,6 +1,14 @@
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
+/**
+ * Vincent Pham
+ * problem 2
+ *
+ * CSS 143
+ * - Assigned: 1/03/2024
+ * - Due: Saturday January 13 23:59:00 PST 2024
+ */
 
 public class Problem2Test {
 

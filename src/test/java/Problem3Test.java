@@ -3,7 +3,6 @@
  */
 
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -29,7 +28,7 @@ public class Problem3Test {
 
         long startTime = System.nanoTime();
 
-        long actual = Problem3.SumOfNonUnique(input);
+        long actual = Problem3.sumOfNonUnique(input);
 
         long endTime = System.nanoTime();
         long durationInNano = endTime - startTime;

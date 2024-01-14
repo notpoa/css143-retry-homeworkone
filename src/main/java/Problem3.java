@@ -57,4 +57,5 @@ public class Problem3 {
         System.out.println("Test 4: " + sumOfNonUnique(test4)); // Output: 16
         System.out.println("Test 5: " + sumOfNonUnique(test5)); // Output: 20
     }
+
 }
