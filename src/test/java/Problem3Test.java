@@ -41,7 +41,7 @@ public class Problem3Test {
 
         // Test case 5: array with all non-unique elements
         int[] test5 = {1, 1, 1, 2, 2, 3, 3, 4, 4};
-        assertEquals(20, Problem3.sumOfNonUnique(test5));
+        assertEquals(21, Problem3.sumOfNonUnique(test5));
     }
 
     @Test
