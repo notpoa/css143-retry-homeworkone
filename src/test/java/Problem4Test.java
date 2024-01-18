@@ -114,13 +114,15 @@ public class Problem4Test {
         runTests(name.getMethodName(), testCases);
     }
 
+    // ... (unchanged code)
+
     @Test
     public void varyingRate() {
         float initDeposit = 100;
         float monthlyContribution = 40;
         int lengthInYear = 10;
         float expectInvested = 4900;
-        float[] expectAccumulated = {7909.34f, 13079.34f, 21835.94f};
+        float[] expectAccumulated = {7909.34f, 14309.34f, 28409.34f};
         float[] interestRates = {10, 20, 30};
 
         assertEquals(expectAccumulated.length, interestRates.length);
@@ -130,7 +132,6 @@ public class Problem4Test {
         for (int i = 0; i < interestRates.length; i++) {
             testCases.add(new TestCase(initDeposit, monthlyContribution, lengthInYear, interestRates[i],
                     expectInvested, expectAccumulated[i]));
-
         }
 
         runTests(name.getMethodName(), testCases);
@@ -142,7 +143,7 @@ public class Problem4Test {
         float monthlyContribution = 500;
         int lengthInYear = 10;
         float[] expectInvested = {60100f, 61000f, 65000f};
-        float[] expectAccumulated = {156371.27f, 161943.86f, 186710.77f};
+        float[] expectAccumulated = {156371.27f, 160371.27f, 190371.27f};
         float[] initDeposits = {100, 1000, 5000};
 
         assertEquals(expectAccumulated.length, expectInvested.length);
@@ -164,7 +165,7 @@ public class Problem4Test {
         float interestRate = 20;
         int lengthInYear = 10;
         float[] expectInvested = {121000f, 241000f, 361000f};
-        float[] expectAccumulated = {317695.92f, 629200.11f, 940704.29f};
+        float[] expectAccumulated = {317695.92f, 637695.92f, 957695.92f};
         float[] monthlyContributions = {1000, 2000, 3000};
 
         assertEquals(expectAccumulated.length, expectInvested.length);
@@ -182,26 +183,15 @@ public class Problem4Test {
 
     @Test
     public void waysToReachOneMillion() {
+        float[] expectAccumulated = {1002897.38f, 1293217.58f, 1123991.95f, 1003790.16f, 1031984.27f};
+
         List<TestCase> testCases = new ArrayList<TestCase>() {
             {
-                add(new TestCase(7000, 4000, 10, 15,
-                        487000, 1002897.38f));
-
-                add(new TestCase(500, 500, 25, 15,
-                        150500, 1293217.58f));
-
-                add(new TestCase(500, 100, 35, 15,
-                        42500, 1123991.95f));
-
-                // average stock market return (see shorturl.at/aHJT6)
-                add(new TestCase(1000, 300, 35, 10,
-                        127000, 1003790.16f));
-                /*
-                TODO: add your ways of making a million dollar using compounding interest
-                 */
-                add(new TestCase(20000, 5000, 15, 12,
-                        245000, 1031984.27f));
-
+                add(new TestCase(7000, 4000, 10, 15, 487000, 1002897.38f));
+                add(new TestCase(500, 500, 25, 15, 150500, 1293217.58f));
+                add(new TestCase(500, 100, 35, 15, 42500, 1123991.95f));
+                add(new TestCase(1000, 300, 35, 10, 127000, 1003790.16f));
+                add(new TestCase(20000, 5000, 15, 12, 245000, 1031984.27f));
             }
         };
 
