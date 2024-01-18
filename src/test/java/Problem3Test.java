@@ -3,17 +3,45 @@
  */
 
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+/**
+ * Vincent Pham
+ * problem 1
+ *
+ * CSS 143
+ * - Assigned: 1/03/2024
+ * - Due: Saturday January 13 23:59:00 PST 2024
+ */
 
 public class Problem3Test {
 
     // Okay to change the content of this function
     // DO NOT REMOVE OR CHANGE the signature
     @Test
+    /**
+     * worked with aleph on the testSumOfNonUnique method
+     */
     public void testSumOfNonUnique() {
-        assertTrue(false); // TODO: Place-holder. Replace with your tests.
+        // Test case 1: single element array
+        int[] test1 = {3};
+        assertEquals(0, Problem3.sumOfNonUnique(test1));
+
+        // Test case 2: array with unique elements
+        int[] test2 = {3, 2};
+        assertEquals(0, Problem3.sumOfNonUnique(test2));
+
+        // Test case 3: array with non-unique elements
+        int[] test3 = {2, 3, 2};
+        assertEquals(4, Problem3.sumOfNonUnique(test3));
+
+        // Test case 4: array with negative elements
+        int[] test4 = {2, 4, 2, 1, 4, -5, 4};
+        assertEquals(16, Problem3.sumOfNonUnique(test4));
+
+        // Test case 5: array with all non-unique elements
+        int[] test5 = {1, 1, 1, 2, 2, 3, 3, 4, 4};
+        assertEquals(21, Problem3.sumOfNonUnique(test5));
     }
 
     @Test
@@ -29,7 +57,7 @@ public class Problem3Test {
 
         long startTime = System.nanoTime();
 
-        long actual = Problem3.SumOfNonUnique(input);
+        long actual = Problem3.sumOfNonUnique(input);
 
         long endTime = System.nanoTime();
         long durationInNano = endTime - startTime;
