@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Vincent Pham
  * Problem 3
@@ -28,18 +31,17 @@ public class Problem3 {
     public static int sumOfNonUnique(int[] arr) {
         int sum = 0;
 
-        // Count occurrences of each element using an array
-        int[] count = new int[101]; // Assuming the range of integers is [-50, 50]
+        // Use a HashMap to count occurrences
+        Map<Integer, Integer> countMap = new HashMap<>();
 
-        // Count occurrences
         for (int num : arr) {
-            count[num + 50]++;
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
         }
 
         // Calculate the sum of non-unique elements
-        for (int i = 0; i < count.length; i++) {
-            if (count[i] > 1) {
-                sum += (i - 50) * count[i]; // Corrected the sum calculation
+        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                sum += entry.getKey() * entry.getValue();
             }
         }
 
