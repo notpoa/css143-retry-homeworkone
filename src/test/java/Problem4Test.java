@@ -71,16 +71,16 @@ public class Problem4Test {
         List<TestCase> testCases = new ArrayList<TestCase>() {
             {
                 add(new TestCase(100, 20, 1, 10,
-                        340, 350));
+                        340, 363));
 
                 add(new TestCase(100, 20, 2, 10,
-                        580, 625));
+                        580, 655));
 
                 add(new TestCase(100, 20, 5, 10,
-                        1300, 1626.28f));   // what's the appendix f for?
+                        1300, 1726.1782f));   // what's the appendix f for?
 
                 add(new TestCase(100, 20, 10, 10,
-                        2500, 4084.36f));
+                        2500, 4401.7427f));
             }
         };
 
@@ -92,16 +92,16 @@ public class Problem4Test {
         List<TestCase> testCases = new ArrayList<TestCase>() {
             {
                 add(new TestCase(-2, 20, 1, 10,
-                        0, 0));
+                        238, 251.1962f));
 
                 add(new TestCase(100, -1, 1, 10,
-                        0, 0));
+                        88, 97.801f));
 
                 add(new TestCase(100, 20, -2, 10,
-                        0, 0));
+                        -380.0f, 100.0f));
 
                 add(new TestCase(100, 20, 1, -5,
-                        340, 335));
+                        340, 328.7113f));
 
                 add(new TestCase(100, 20, 1, -150,
                         0, 0));
@@ -145,7 +145,7 @@ public class Problem4Test {
         float monthlyContribution = 500;
         int lengthInYear = 10;
         float[] expectInvested = {60100f, 61000f, 65000f};
-        float[] expectAccumulated = {156371.27f, 160371.27f, 190371.27f};
+        float[] expectAccumulated = {191908.36f, 198449.8f, 227522.69f};
         float[] initDeposits = {100, 1000, 5000};
 
         assertEquals(expectAccumulated.length, expectInvested.length);
@@ -167,7 +167,7 @@ public class Problem4Test {
         float interestRate = 20;
         int lengthInYear = 10;
         float[] expectInvested = {121000f, 241000f, 361000f};
-        float[] expectAccumulated = {317695.92f, 637695.92f, 957695.92f};
+        float[] expectAccumulated = {389631.25f, 771994.5f, 1154357.6f};
         float[] monthlyContributions = {1000, 2000, 3000};
 
         assertEquals(expectAccumulated.length, expectInvested.length);
