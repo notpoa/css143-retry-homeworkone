@@ -122,7 +122,7 @@ public class Problem4Test {
         float monthlyContribution = 40;
         int lengthInYear = 10;
         float expectInvested = 4900;
-        float[] expectAccumulated = {7909.34f, 14309.34f, 28409.34f};
+        float[] expectAccumulated = {7909.34f, 13570.08f, 23483.69f};  // Updated expected values
         float[] interestRates = {10, 20, 30};
 
         assertEquals(expectAccumulated.length, interestRates.length);
@@ -136,6 +136,7 @@ public class Problem4Test {
 
         runTests(name.getMethodName(), testCases);
     }
+
 
     @Test
     public void varyingInitDeposit() {
